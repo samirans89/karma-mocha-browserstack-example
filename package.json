@@ -1,0 +1,41 @@
+{
+  "name": "karma-mocha-browserstack-example",
+  "version": "1.0.0",
+  "description": "Sample to test parallel runs of Karma JS using Mocha and Chai frameworks with BrowserStack. This example contains advanced reporting features to report test session statuses on BrowserStack.",
+  "main": "karma.conf.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "karma start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/browserstack/karma-browserstack-example.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/browserstack/karma-browserstack-example/issues"
+  },
+  "homepage": "https://github.com/browserstack/karma-browserstack-example#readme",
+  "dependencies": {
+    "base64-js": "^1.3.1",
+    "chalk": "^3.0.0",
+    "js-base64": "^2.5.1",
+    "karma": "^4.4.1",
+    "karma-browserstack-launcher": "file:../karma-browserstack-launcher",
+    "karma-htmlfile-reporter": "^0.3.8",
+    "karma-qunit": "^0.1.5",
+    "node-rest-client": "^3.1.0",
+    "pretty-ms": "^5.1.0",
+    "qunitjs": "^1.19.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "karma-chai": "^0.1.0",
+    "karma-mocha": "^1.3.0",
+    "karma-parallel": "^0.3.1",
+    "mocha": "^7.0.1"
+  }
+}
