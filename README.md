@@ -1,8 +1,7 @@
  Karma-Mocha-BrowserStack Example
- Sample to test parallel runs of Karma JS using Mocha and Chai frameworks with BrowserStack. This example contains advanced reporting features to report test session statuses on BrowserStack.
 =========
 
-Sample for using karma-browserstack-launcher with advanced reporting features, to run Karma tests (Mocha + Chai framework) on BrowserStack infrastructure.
+Sample to test parallel runs of Karma JS using Mocha and Chai frameworks with BrowserStack. This example contains advanced reporting features to report test session statuses on BrowserStack using karma-browserstack-launcher (https://github.com/samirans89/karma-browserstack-launcher).
 
 ### Prerequisites
 Node and npm

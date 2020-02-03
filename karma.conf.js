@@ -143,7 +143,7 @@ module.exports = function (config) {
     browserDisconnectTimeout: 210000,
     browserSocketTimeout: 120000,
     browserNoActivityTimeout: 210000,
-    concurrency: 20, // concurrency value will start x browsers / devices at a time on BrowserStack where x is the concurrency value
+    concurrency: 5, // concurrency value will start x browsers / devices at a time on BrowserStack where x is the concurrency value
     reportSlowerThan: 60000,
     browsers: ['bs_firefox_mac', 'bs_pixel', 'bs_iphone8', 'bs_chrome_win10', 'bs_ie_win81'],
     //browsers: ['bs_iphone8'],
