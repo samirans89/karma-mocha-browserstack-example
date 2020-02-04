@@ -22,7 +22,8 @@ module.exports = function (config) {
     },
 
     parallelOptions: {
-      executors: 4
+      executors: 4,
+      shardStrategy: 'round-robin'
     },
     // list of files / patterns to load in the browser
     files: [
@@ -85,7 +86,7 @@ module.exports = function (config) {
       // startTunnel: false,
       // tunnelIdentifier: 'mykarmatest',
       // forcelocal: true,
-      build: 'Karma JS test suites',
+      build: 'Karma JS suites',
       name: 'Karma JS test suite',
       project: 'BrowserStack Sample with Karma Mocha Chai',
       apiClientEndpoint: 'https://api.browserstack.com'
@@ -137,12 +138,12 @@ module.exports = function (config) {
         //video: false,
       }
     },
-
-    captureTimeout: 210000,
+    retryLimit: 0,
+    captureTimeout: 3e5,
     browserDisconnectTolerance: 0,
-    browserDisconnectTimeout: 210000,
+    browserDisconnectTimeout: 3e5,
     browserSocketTimeout: 120000,
-    browserNoActivityTimeout: 210000,
+    browserNoActivityTimeout: 3e5,
     concurrency: 5, // concurrency value will start x browsers / devices at a time on BrowserStack where x is the concurrency value
     reportSlowerThan: 60000,
     browsers: ['bs_firefox_mac', 'bs_pixel', 'bs_iphone8', 'bs_chrome_win10', 'bs_ie_win81'],
