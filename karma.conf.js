@@ -89,7 +89,8 @@ module.exports = function (config) {
       build: 'Karma JS suites',
       name: 'Karma JS test suite',
       project: 'BrowserStack Sample with Karma Mocha Chai',
-      apiClientEndpoint: 'https://api.browserstack.com'
+      apiClientEndpoint: 'https://api.browserstack.com',
+      timeout: 600
     },
 
 
@@ -142,7 +143,7 @@ module.exports = function (config) {
     captureTimeout: 3e5,
     browserDisconnectTolerance: 0,
     browserDisconnectTimeout: 3e5,
-    browserSocketTimeout: 120000,
+    browserSocketTimeout: 1.2e5,
     browserNoActivityTimeout: 3e5,
     concurrency: 5, // concurrency value will start x browsers / devices at a time on BrowserStack where x is the concurrency value
     reportSlowerThan: 60000,
