@@ -17,7 +17,8 @@ steps:
     script: |
       echo Write your commands here
       git clone https://github.com/samirans89/karma-browserstack-launcher.git
-      npm install -g base64-js
+      cd karma-browserstack-launcher
+      npm install base64-js
       echo $(Build.SourcesDirectory)
       pwd
       ls
