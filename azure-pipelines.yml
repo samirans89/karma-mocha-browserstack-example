@@ -14,7 +14,7 @@ pool:
 steps:
 - task: BrowserStackConfig@0
   inputs:
-    BrowserStackServiceEndPoint: https://api.browserstack.com
+    BrowserStackServiceEndPoint: 'BStack Demo Account'
 - task: CmdLine@2
   inputs:
     script: |
@@ -36,3 +36,4 @@ steps:
     npm install
     npm test
   displayName: 'npm install and test'
+- task: BrowserStackStopLocal@0
