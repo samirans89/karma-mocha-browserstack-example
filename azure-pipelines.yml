@@ -36,8 +36,8 @@ steps:
 - script: |
     npm install
     echo Bstack
-    echo $process.env.BROWSERSTACK_USERNAME
-    echo $process.env.BROWSERSTACK_KEY
+    echo $(BROWSERSTACK_USERNAME)
+    echo $(BROWSERSTACK_ACCESS_KEY)
     echo creds complete
     npm test
   displayName: 'npm install and test'
