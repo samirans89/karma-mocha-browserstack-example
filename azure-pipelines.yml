@@ -18,6 +18,8 @@ steps:
       echo Write your commands here
       git clone https://github.com/samirans89/karma-browserstack-launcher.git
       echo $(Build.SourcesDirectory)
+      pwd
+      ls
       echo Hello world
     workingDirectory: '$(Build.SourcesDirectory)'
 - task: NodeTool@0
