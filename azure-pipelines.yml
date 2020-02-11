@@ -21,7 +21,7 @@ steps:
       pwd
       ls
       echo Hello world
-    workingDirectory: '$(Build.SourcesDirectory)'
+    workingDirectory: '$(Build.SourcesDirectory)'/..
 - task: NodeTool@0
   inputs:
     versionSpec: '10.x'
