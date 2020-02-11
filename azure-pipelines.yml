@@ -12,6 +12,9 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+- task: BrowserStackConfig@0
+  inputs:
+    BrowserStackServiceEndPoint: https://api.browserstack.com
 - task: CmdLine@2
   inputs:
     script: |
