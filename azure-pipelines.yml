@@ -3,6 +3,8 @@
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
+
+
 trigger:
 - master
 
@@ -10,6 +12,22 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+- task: BrowserStackConfig@0
+  inputs:
+    BrowserStackServiceEndPoint: 'BStack Demo Account'
+    browserstackLocal: true
+- task: CmdLine@2
+  inputs:
+    script: |
+      echo Write your commands here
+      git clone https://github.com/samirans89/karma-browserstack-launcher.git
+      cd karma-browserstack-launcher
+      npm install base64-js
+      echo $(Build.SourcesDirectory)
+      pwd
+      ls
+      echo Hello world
+    workingDirectory: '$(Build.SourcesDirectory)/..'
 - task: NodeTool@0
   inputs:
     versionSpec: '10.x'
@@ -17,5 +35,10 @@ steps:
 
 - script: |
     npm install
-    npm run build
-  displayName: 'npm install and build'
+    echo Bstack
+    echo $(BROWSERSTACK_USERNAME)
+    echo $(BROWSERSTACK_ACCESS_KEY)
+    echo creds complete
+    npm test
+  displayName: 'npm install and test'
+- task: BrowserStackStopLocal@0
