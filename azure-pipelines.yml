@@ -15,6 +15,7 @@ steps:
 - task: BrowserStackConfig@0
   inputs:
     BrowserStackServiceEndPoint: 'BStack Demo Account'
+    browserstackLocal: true
 - task: CmdLine@2
   inputs:
     script: |
@@ -34,6 +35,10 @@ steps:
 
 - script: |
     npm install
+    echo Bstack
+    echo process.env.BROWSERSTACK_USERNAME
+    echo process.env.BROWSERSTACK_KEY
+    echo creds complete
     npm test
   displayName: 'npm install and test'
 - task: BrowserStackStopLocal@0
