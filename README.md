@@ -7,7 +7,6 @@ Sample to test parallel runs of Karma JS using Mocha and Chai frameworks with Br
 Node and npm
 
 ### Clone this repository
-`git clone https://github.com/samirans89/karma-mocha-browserstack-example.git`
 
 ### Install dependencies
 
